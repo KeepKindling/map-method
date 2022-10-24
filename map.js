@@ -6,15 +6,20 @@
 
 // Using a for loop
 
+let nums = [1, 2, 3, 4, 5];
+let results = [];
+for (let num in nums) {
+  results.push(num * 2)
+} 
+console.log(results);
 
 // Using map()
+// const timesByTwo = function (num) {
+//   return num * 2
+// }
+const mapResults = nums.map(num => num * 2)
 
-
-// Simplified w/ map()
-
-
-// Simplfied w/ map() + arrow function
-
+console.log(mapResults)
 
 // With objects:
 const students = [
@@ -37,3 +42,6 @@ const students = [
     skill: 'CSS'
   },
 ];
+
+const studentsWithIds = students.map(students => [students.name, students.id]);
+console.log(studentsWithIds)
